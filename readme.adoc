@@ -7,6 +7,8 @@ This repository will contain the code for providing lunch feedback at Couchbase.
 . Amazon Lambda with Python
 . Couchbase AMI
 
+Once this solution is installed, Couchbase employees will be able to press a "`red`" or "`green`" button to tell if they liked or not liked the food.
+
 == Amazon IoT Button
 
 == Amazon IoT SDK
