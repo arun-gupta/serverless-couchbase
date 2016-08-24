@@ -1,0 +1,18 @@
+= Lunch Feedback at Couchbase
+
+This repository will contain the code for providing lunch feedback at Couchbase. The key components of this application are:
+
+. Amazon IoT Button
+. Amazon IoT SDK
+. Amazon Lambda with Python
+. Couchbase AMI
+
+== Amazon IoT Button
+
+== Amazon IoT SDK
+
+== Amazon Lambda with Python
+
+== Couchbase AMI
+
+
