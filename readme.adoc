@@ -17,6 +17,8 @@ Start Couchbase Server 4.5 EE on Amazon from https://aws.amazon.com/marketplace/
 
 == Amazon IoT SDK
 
+Following the tutorial: https://aws.amazon.com/iot/button/
+
 == Amazon Lambda with Python
 
 . Create a deployment package
