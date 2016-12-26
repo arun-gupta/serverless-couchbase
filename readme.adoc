@@ -3,8 +3,7 @@
 This repository will contain the code for providing lunch feedback at Couchbase. The key components of this application are:
 
 . Amazon IoT Button
-. Amazon IoT SDK
-. Amazon Lambda with Python
+. Amazon Lambda with Java
 . Couchbase AMI
 
 Once this solution is installed, Couchbase employees will be able to press a "`red`" or "`green`" button to tell if they liked or not liked the food.
@@ -13,21 +12,28 @@ Once this solution is installed, Couchbase employees will be able to press a "`r
 
 Start Couchbase Server 4.5 EE on Amazon from https://aws.amazon.com/marketplace/pp/B011W4I8ZG/ref=sp_mpg_product_title?ie=UTF8&sr=0-9[AWS Marketplace].
 
+== AWS Lambda Function with Couchbase and Java
+
+. Create a deployment package: `mvn package`
+. Create Lambda function:
++
+```
+aws lambda create-function \
+--function-name CouchbaseLambda \
+--role arn:aws:iam::598307997273:role/service-role/myLambdaRole \
+--handler org.sample.serverless.aws.couchbase.CouchbaseLambda \
+--zip-file fileb:///Users/arungupta/workspaces/amazon-iot-button/couchbaselambda/target/couchbaselambda-1.0-SNAPSHOT.jar \
+--description "Couchbase Lambda" \
+--runtime java8 \
+--region us-west-2 \
+--timeout 30 \
+--memory-size 1024 \
+--environment Variables={COUCHBASE_HOST=ec2-35-165-83-82.us-west-2.compute.amazonaws.com/} \
+--publish
+```
+
 == Amazon IoT Button
 
-== Amazon IoT SDK
-
-Following the tutorial: https://aws.amazon.com/iot/button/
-
-== Amazon Lambda with Python
-
-. Create a deployment package
-. Upload deployment package
-. Add Python code
-.. Connect with Couchbase server
-. Test Lambda function
-
-More details: http://docs.aws.amazon.com/lambda/latest/dg/lambda-app.html
-
+. Add trigger
 
 
