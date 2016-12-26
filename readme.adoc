@@ -2,8 +2,8 @@
 
 This repository will contain the code for providing lunch feedback at Couchbase. The key components of this application are:
 
-. Amazon IoT Button
-. Amazon Lambda with Java
+. AWS IoT Button
+. AWS Lambda storing a JSON document in Couchbase using Java SDK
 . Couchbase AMI
 
 Once this solution is installed, Couchbase employees will be able to press a "`red`" or "`green`" button to tell if they liked or not liked the food.
