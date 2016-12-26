@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author arungupta
  */
-public class HelloCouchbaseLambda implements RequestHandler<Request, String> {
+public class CouchbaseLambda implements RequestHandler<Request, String> {
 
     CouchbaseCluster cluster;
     Bucket bucket;
